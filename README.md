@@ -7,8 +7,21 @@ The official paper can be found at [paper](https://arxiv.org/pdf/2309.08424v2.pd
 
 
 
-We contribute 3000 images with over 30000 instance masks manually annotated for reliable evaluation of the plane instance segmentation task.
+### How to run the inference?
+1. Use conda to create an env:
+```
+conda env create -f environment.yml
+```
 
-![result1](/images/label.png)
+2. Create a folder "weights", download resnet and X-PDNet checkpoint via this [link](https://drive.google.com/drive/folders/1Y5cIHAKG44lEz0O6eNOfxoc7oRKMEFzL?usp=sharing) and put on "weights" folder.
+3. Inference a single image (*.png or *.jpg for mat):
+```
+python3 simple_inference.py --config=XPDNNet_101_config --trained_model=weights/XPDNet_101_9_125000.pth  --image=example
+_images/scene0134_01_frame_color_756.jpg
 
-For any enquiries about the results or manually annotated dataset, please contact me: duccd@hanyang.ac.kr
+```
+4. Inference a folder:
+```
+python3 simple_inference.py --config=XPDNNet_101_config --trained_model=weights/XPDNet_101_9_125000.pth --images=input_folder:output_folder
+
+```

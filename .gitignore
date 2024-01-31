@@ -142,3 +142,4 @@ image_logs/
 __pycache__
 inference/
 .DS_Store
+models/functions/losses.py
