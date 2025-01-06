@@ -16,12 +16,12 @@ conda env create -f environment.yml
 2. Create a folder "weights", download resnet and X-PDNet checkpoint via this [link](https://drive.google.com/drive/folders/1Y5cIHAKG44lEz0O6eNOfxoc7oRKMEFzL?usp=sharing) and put on "weights" folder.
 3. Inference a single image (*.png or *.jpg for mat):
 ```
-python3 simple_inference.py --config=XPDNNet_101_config --trained_model=weights/XPDNet_101_9_125000.pth  --image=example
+python3 simple_inference.py --config=XPDNet_101_config --trained_model=weights/XPDNet_101_9_125000.pth  --image=example
 _images/scene0134_01_frame_color_756.jpg
 
 ```
 4. Inference a folder:
 ```
-python3 simple_inference.py --config=XPDNNet_101_config --trained_model=weights/XPDNet_101_9_125000.pth --images=input_folder:output_folder
+python3 simple_inference.py --config=XPDNet_101_config --trained_model=weights/XPDNet_101_9_125000.pth --images=input_folder:output_folder
 
 ```
